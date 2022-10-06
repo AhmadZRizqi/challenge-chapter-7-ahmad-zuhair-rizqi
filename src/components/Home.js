@@ -87,11 +87,11 @@ function Home() {
 
   return (
     <div className="App">
-        <Navbar bg="dark" expand="lg" variant="dark">
+        <Navbar bg="dark" expand="lg" variant="dark" className="nav-bar">
             <Container>
                 <Navbar.Brand href="/">Movie List</Navbar.Brand>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
-                <Navbar.Collapse id="basic-navbar-nav">
+                <Navbar.Collapse id="basic-navbar-nav" className="justify-content-beetween">
                 <Nav className="me-auto">
                     <Nav.Item>
                         <Nav.Link href="/" className="btn-home" >Home</Nav.Link>
@@ -100,18 +100,28 @@ function Home() {
                     <Nav.Item>
                         <Nav.Link href="#movieList" className="btn-home" >Movie</Nav.Link>
                     </Nav.Item>
-
-                    <Form className="search-bar" onSubmit={handleSubmit}>
-                        <Form.Control
-                            type="search"
-                            placeholder="Search"
-                            className="me-2"
-                            aria-label="Search"
-                            value={search}
-                            onChange={handleChange}></Form.Control>
-                        <Button variant="outline-success" type="submit">Search</Button>
-                    </Form>
                 </Nav>
+
+                <Nav>
+                  <Form className="search-bar" onSubmit={handleSubmit}>
+                    <Form.Control
+                      type="search"
+                      placeholder="Search"
+                      className="me-2"
+                      aria-label="Search"
+                      value={search}
+                      onChange={handleChange}></Form.Control>
+                      <Button variant="success" type="submit">Search</Button>
+                  </Form>
+                </Nav>
+
+                <Nav>
+                  <div className="btn-login-regis">
+                    <Button variant="outline-light">Login</Button>
+                    <Button style={{ marginLeft: 5 }} variant="outline-light">Register</Button>
+                  </div>
+                </Nav>
+
                 </Navbar.Collapse>
             </Container>
         </Navbar>
@@ -119,8 +129,8 @@ function Home() {
         <div>
             <UncontrolledExample />
         </div>
-
-        {search ? (<h1 style={{ marginTop: 22 }}>Search Result</h1>):(<h1 style={{ marginTop: 22 }}>Popular Movie</h1>)}
+        <h1 style={{ marginTop: 22 }}>Movies</h1>
+        {/* {search ? (<h1 style={{ marginTop: 22 }}>Search Result</h1>):(<h1 style={{ marginTop: 22 }}>Popular Movie</h1>)} */}
         
         <section id="movieList">
             <div className="movie-container">

@@ -36,3 +36,20 @@
     transform: rotate(360deg);
   }
 }
+
+.btn-login-regis{
+  display: flex;
+  justify-content: center;
+}
+
+.nav-bar{
+  margin-left: auto;
+}
+
+@media only screen and (min-width: 993px) {
+  .btn-login-regis{
+    margin-left: 222px;
+    display: flex;
+    justify-content: center;
+  }
+}

@@ -2,6 +2,7 @@ import  { useState, useEffect } from "react";
 import { Navbar, Container, Form, Button, Nav } from 'react-bootstrap';
 import  { useNavigate, useParams } from "react-router-dom";
 import 'bootstrap/dist/css/bootstrap.min.css';
+import './Detail.css'
 
 const Detail = ({original_title, title, poster_path, vote_average, release_date, overview})=>{
     const imageAPI="https://image.tmdb.org/t/p/w500/";
@@ -29,7 +30,7 @@ const Detail = ({original_title, title, poster_path, vote_average, release_date,
     }, [params.id]);
     
         return (
-            <div className="movie-detail">
+            <div className="detail-page">
                 <Navbar bg="dark" expand="lg" variant="dark">
                     <Container>
                         <Navbar.Brand>Movie Detail</Navbar.Brand>
@@ -44,11 +45,17 @@ const Detail = ({original_title, title, poster_path, vote_average, release_date,
                     </Container>
                 </Navbar>
 
-                <img className="img" src={imageAPI+(currentData? currentData.poster_path: "")}></img>
-                <h4>{currentData? currentData.title : ""}</h4>
-                <h5 style={{ fontSize: 15 }}>Rate: {currentData? currentData.vote_average : ""}</h5>
-                <h5 style={{ fontSize: 15 }}>Release Date: {currentData? currentData.release_date : ""}</h5>
-                <a>Overview: {currentData? currentData.overview : ""}</a>
+                <div className="movie-detail">
+                    <h4 style={{ fontSize: 33, marginTop: 10 }}>{currentData? currentData.title : ""}</h4>
+                    <img className="img-detail" src={imageAPI+(currentData? currentData.poster_path: "")} style={{ width: 200}}></img>
+                    <h5 style={{ fontSize: 15 }}>Rate: {currentData? currentData.vote_average : ""}</h5>
+                    <h5 style={{ fontSize: 15 }}>Release Date: {currentData? currentData.release_date : ""}</h5>
+                    <h5 style={{ fontSize: 15 }}>Genre: {currentData?.genres?.map((item) => item.name + " ")}</h5>
+                    <hr className="seperator" />
+                    <h4 style={{ fontSize: 22 }}>Overview:</h4>
+                    <a>{currentData? currentData.overview : ""}</a>
+                </div>
+
             </div>
         );
     }

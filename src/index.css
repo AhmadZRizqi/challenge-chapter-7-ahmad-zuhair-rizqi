@@ -35,13 +35,12 @@ code {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   padding: 1rem;
 }
 
 .movie-info h4{
   margin: 0;
-  font-size: small;
 }
 
 .search-bar{

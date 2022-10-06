@@ -1,0 +1,30 @@
+.movie-detail {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    width: 60%;
+    min-height: 500px;
+    background: linear-gradient(
+    rgb(161, 161, 161) 0%,
+    rgb(224, 224, 224) 100%
+  );
+    text-align: center;
+    margin: 44px auto;
+    border-radius: 10px;
+    padding-bottom: 32px;
+}
+
+.img-detail{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-self: center;
+}
+
+.seperator {
+    height: 2px;
+    width: 97%;
+    align-self: center;
+    background-color: black;
+  }

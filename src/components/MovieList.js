@@ -1,6 +1,5 @@
-import { Modal,show,Button} from 'react-bootstrap';
+import {Button} from 'react-bootstrap';
 import React, {useState} from 'react';
-import { BiDetail } from "react-icons/bi";
 import { useNavigate } from "react-router-dom";
 
 
@@ -12,11 +11,10 @@ const MovieList = ({title, poster_path, vote_average, release_date, overview, id
             <img className="img" src={imageAPI+poster_path}></img>
             
             <div className='movie-info'>
-                <h4>{title}</h4>
-                <BiDetail 
-                    onClick={() => navigate(`/detail/${id}`)}
-                />
+                <h4 style={{ fontSize: 15 }}>{title}</h4>
             </div>
+
+            <Button variant="dark" onClick={() => navigate(`/detail/${id}`)} style={{ marginBottom: 7 }}>Detail</Button>
         </div>
     );
 }
