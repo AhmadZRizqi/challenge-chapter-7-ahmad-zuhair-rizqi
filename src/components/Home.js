@@ -1,11 +1,8 @@
 import  { useState, useEffect } from "react";
 import { Navbar, Container, Form, Button, Nav } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import axios from "axios";
-import { useNavigate } from "react-router-dom";
 import Detail from "./Detail";
 import UncontrolledExample from "./Carousel";
-
 import '../App.css';
 import MovieList from "./MovieList";
 
