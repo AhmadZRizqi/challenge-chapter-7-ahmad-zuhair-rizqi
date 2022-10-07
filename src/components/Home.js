@@ -93,7 +93,7 @@ function Home() {
         <div>
             <UncontrolledExample />
         </div>
-        <h1 style={{ marginTop: 22 }}>Movies</h1>
+        <h1 style={{ marginTop: 22 }}>Popular Movies / Hasil Pencarian</h1>
         {/* {search ? (<h1 style={{ marginTop: 22 }}>Search Result</h1>):(<h1 style={{ marginTop: 22 }}>Popular Movie</h1>)} */}
         
         <section id="movieList">
