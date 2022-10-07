@@ -11,8 +11,6 @@ function Home() {
     const moviesAPI="https://api.themoviedb.org/3/movie/popular?api_key=cf87462aff878f20a02d5d0d442ddb61";
     const [data, setData] = useState([]);
     const [search, setSearch] = useState('');
-    const [loading, setLoading] = useState(false);
-    const [refetchData, setRefetchData] = useState(true);
 
   useEffect(() => {
     getMovies(moviesAPI);
