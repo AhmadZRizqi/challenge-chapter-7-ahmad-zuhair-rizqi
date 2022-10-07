@@ -1,5 +1,6 @@
 import Carousel from 'react-bootstrap/Carousel';
 import { Button } from 'react-bootstrap';
+import { HiOutlinePlay } from 'react-icons/hi';
 
 function UncontrolledExample() {
   return (
@@ -13,7 +14,7 @@ function UncontrolledExample() {
         <Carousel.Caption>
           <h3>Doctor Strange in the Multiverse of Madness</h3>
           <p>Sinopsis Doctor Strange in the Multiverse of Madness mengisahkan Stephen Strange yang kedatangan tamu dari semesta lain, yaitu America Chavez. Kehadiran America ke semesta Strange yang berada di universe utama MCU adalah untuk meminta bantuan sang superhero</p>
-          <Button variant="danger" type="submit">Watch Trailer</Button>
+          <Button variant="danger"><HiOutlinePlay/> Watch Trailer</Button>
         </Carousel.Caption>
       </Carousel.Item>
       <Carousel.Item>
@@ -26,7 +27,7 @@ function UncontrolledExample() {
         <Carousel.Caption>
           <h3>Black Adam</h3>
           <p>Nearly 5,000 years after he was bestowed with the almighty powers of the Egyptian gods and imprisoned just as quickly Black Adam is freed from his earthly tomb, ready to unleash his unique form of justice on the modern world.</p>
-          <Button variant="danger" type="submit">Watch Trailer</Button>
+          <Button variant="danger"><HiOutlinePlay/> Watch Trailer</Button>
         </Carousel.Caption>
       </Carousel.Item>
       <Carousel.Item>
@@ -41,7 +42,7 @@ function UncontrolledExample() {
           <p>
           Penjahat lincah Loki melanjutkan perannya sebagai Dewa Mischief setelah peristiwa "Avengers: Endgame".
           </p>
-          <Button variant="danger" type="submit">Watch Trailer</Button>
+          <Button variant="danger"><HiOutlinePlay/> Watch Trailer</Button>
         </Carousel.Caption>
       </Carousel.Item>
     </Carousel>

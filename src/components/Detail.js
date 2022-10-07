@@ -2,8 +2,8 @@ import  { useState, useEffect } from "react";
 import { Navbar, Container, Nav } from 'react-bootstrap';
 import  { useNavigate, useParams } from "react-router-dom";
 import 'bootstrap/dist/css/bootstrap.min.css';
-import './Detail.css'
-import { AiFillStar } from 'react-icons/ai'
+import './Detail.css';
+import { AiFillStar } from 'react-icons/ai';
 
 const Detail = ({})=>{
     const imageAPI="https://image.tmdb.org/t/p/w500/";
