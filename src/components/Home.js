@@ -74,14 +74,14 @@ function Home() {
                       aria-label="Search"
                       value={search}
                       onChange={handleChange}></Form.Control>
-                      <Button variant="success" type="submit">Search</Button>
+                      <Button variant="danger" type="submit">Search</Button>
                   </Form>
                 </Nav>
 
                 <Nav>
                   <div className="btn-login-regis">
-                    <Button variant="outline-light">Login</Button>
-                    <Button style={{ marginLeft: 5 }} variant="outline-light">Register</Button>
+                    <Button variant="outline-danger">Login</Button>
+                    <Button style={{ marginLeft: 5 }} variant="outline-danger">Register</Button>
                   </div>
                 </Nav>
 
