@@ -1,23 +1,15 @@
 import  { useState, useEffect } from "react";
-import { Navbar, Container, Form, Button, Nav } from 'react-bootstrap';
+import { Navbar, Container, Nav } from 'react-bootstrap';
 import  { useNavigate, useParams } from "react-router-dom";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './Detail.css'
 
-const Detail = ({original_title, title, poster_path, vote_average, release_date, overview})=>{
+const Detail = ({})=>{
     const imageAPI="https://image.tmdb.org/t/p/w500/";
     const params = useParams();
     const navigate = useNavigate();
     // const detailAPI="https://api.themoviedb.org/3/movie/{movie_id}?api_key=cf87462aff878f20a02d5d0d442ddb61&language=en-US";
     const [currentData, setData] = useState([]);
-
-    // const getDetailMovies = () => {
-    //     fetch(`https://api.themoviedb.org/3/movie/${params.id}?api_key=cf87462aff878f20a02d5d0d442ddb61&language=en-US`)
-    //     .then((res)=>res.json())
-    //     .then((data) => {
-    //     setData(data.results);
-    //     })
-    // }
 
     useEffect(() => {
         if (params.id){

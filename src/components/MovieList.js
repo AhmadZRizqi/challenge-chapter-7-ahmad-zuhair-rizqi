@@ -1,10 +1,10 @@
 import {Button} from 'react-bootstrap';
-import React, {useState} from 'react';
+import React from 'react';
 import { useNavigate } from "react-router-dom";
 
 
 const imageAPI="https://image.tmdb.org/t/p/w500/";
-const MovieList = ({title, poster_path, vote_average, release_date, overview, id})=>{
+const MovieList = ({title, poster_path, id})=>{
     const navigate = useNavigate();
     return(
         <div className="movie">
