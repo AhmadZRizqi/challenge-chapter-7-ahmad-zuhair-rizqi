@@ -35,13 +35,14 @@ function Home() {
             const res = await fetch(url);
             const data = await res.json();
             setData(data.results);
+            alert("Success")
           }
           catch(e){
             console.log(e);
           }
           setSearch("");
         } else if (search === "") {
-            alert("Mohon isi input")
+            alert("ERROR: Mohon isi input !!!")
         }
     }
 
