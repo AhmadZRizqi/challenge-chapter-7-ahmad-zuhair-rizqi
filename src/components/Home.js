@@ -102,6 +102,7 @@ function Home() {
             </div>
         </section>
 
+        <footer>Ahmad Zuhair Rizqi [FEJS-2]</footer>
     </div>
   );
 }
