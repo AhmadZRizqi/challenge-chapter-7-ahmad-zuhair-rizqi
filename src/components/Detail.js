@@ -41,7 +41,7 @@ const Detail = ({})=>{
                 <div className="movie-detail">
                     <h4 style={{ fontSize: 33, marginTop: 10 }}>{currentData? currentData.title : ""}</h4>
                     <img className="img-detail" src={imageAPI+(currentData? currentData.poster_path: "")} style={{ width: 200}}></img>
-                    <h5 style={{ fontSize: 15 }}><AiFillStar/> {currentData? currentData.vote_average : ""}</h5>
+                    <h5 style={{ fontSize: 15 }}><AiFillStar/> {currentData? currentData.vote_average + " / 10" : ""}</h5>
                     <h5 style={{ fontSize: 15 }}>Release Date: {currentData? currentData.release_date : ""}</h5>
                     <h5 style={{ fontSize: 15 }}>Genre: {currentData?.genres?.map((item) => item.name + " ")}</h5>
                     <hr className="seperator" />
