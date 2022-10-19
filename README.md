@@ -1,5 +1,4 @@
 # AHMAD ZUHAIR RIZQI [FEJS-2]
-# https://challenge-chapter-5-ahmad-zuhair-rizqi-fejs-2.vercel.app/
 
 # Getting Started with Create React App
 
