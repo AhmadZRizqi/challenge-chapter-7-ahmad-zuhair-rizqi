@@ -1,0 +1,11 @@
+.register-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    width: 60%;
+    min-height: 500px;
+    text-align: center;
+    margin: 44px auto;
+    border-radius: 10px;
+    padding-bottom: 32px;
+}
