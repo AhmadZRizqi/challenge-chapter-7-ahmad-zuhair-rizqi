@@ -1,7 +1,5 @@
 # AHMAD ZUHAIR RIZQI [FEJS-2]
 
-# https://challenge-chapter-6-ahmad-zuhair-rizqi.vercel.app/
-
 ## Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
