@@ -5,13 +5,14 @@
     width: 60%;
     min-height: 500px;
     background: linear-gradient(
-    rgb(161, 161, 161) 0%,
-    rgb(224, 224, 224) 100%
+    rgb(189, 189, 189) 0%,
+    rgb(235, 235, 235) 100%
   );
     text-align: center;
-    margin: 44px auto;
+    margin: 30px auto;
     border-radius: 10px;
-    padding-bottom: 32px;
+    padding-bottom: 26px;
+    box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.3);
 }
 
 .img-detail{

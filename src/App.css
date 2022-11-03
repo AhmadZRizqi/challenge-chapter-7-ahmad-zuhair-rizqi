@@ -52,4 +52,10 @@
     display: flex;
     justify-content: center;
   }
+
+  .btn-login-regis2{
+    margin-left: 252px;
+    display: flex;
+    justify-content: center;
+  }
 }
