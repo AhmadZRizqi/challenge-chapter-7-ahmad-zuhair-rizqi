@@ -2,11 +2,10 @@ import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 import Col from "react-bootstrap/Col";
 import { useNavigate } from "react-router-dom";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import "./Register.css";
 import axios from "axios";
 import GoogleLogin from "../components/GoogleLogin";
-import Home from "./Home";
 import Card from "react-bootstrap/Card";
 import NavRegisLogin from "../components/NavRegisLogin";
 

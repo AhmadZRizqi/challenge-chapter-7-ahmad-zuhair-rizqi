@@ -1,11 +1,9 @@
 import { createSlice } from "@reduxjs/toolkit";
 
-// The initial state when the application load in first time
 const initialState = {
   movies: [],
 };
 
-// Define the reducers
 const movieSlicer = createSlice({
   name: "movie",
   initialState,
@@ -22,12 +20,10 @@ const movieSlicer = createSlice({
   },
 });
 
-// Export the reducer function, the functions will be called in actions
 export const {
   getAllMoviesReducer,
   getDetailMoviesReducer,
   searchMoviesReducer,
 } = movieSlicer.actions;
 
-// Export the reducer to combine it with another reducers
 export default movieSlicer.reducer;

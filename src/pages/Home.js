@@ -1,66 +1,25 @@
 import { useState, useEffect } from "react";
 import { Navbar, Container, Form, Button, Nav } from "react-bootstrap";
-import { useNavigate, Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
-import Detail from "./Detail";
 import UncontrolledExample from "../components/Carousel";
 import "../App.css";
 import MovieList from "../components/MovieList";
-import Register from "./Register";
 import { FaUserCircle } from "react-icons/fa";
+import { RiArrowGoBackFill } from "react-icons/ri";
 import { useDispatch, useSelector } from "react-redux";
-import {
-  getAllMovies,
-  getDetailMovies,
-  searchMovies,
-} from "../redux/actions/movieActions";
+import { getAllMovies, searchMovies } from "../redux/actions/movieActions";
 
-function Home({ token, setToken, setName }) {
+function Home({ token, setToken }) {
   const dispatch = useDispatch();
   const { movies } = useSelector((state) => state.movie);
-  // const searchAPI="https://api.themoviedb.org/3/search/movie?api_key=cf87462aff878f20a02d5d0d442ddb61&query";
-  // const moviesAPI =
-  //   "https://api.themoviedb.org/3/movie/popular?api_key=cf87462aff878f20a02d5d0d442ddb61";
-  // const [data, setData] = useState([]);
   const [search, setSearch] = useState("");
+  const [mencari, setMencari] = useState(false);
   const navigate = useNavigate();
 
   useEffect(() => {
-    // getMovies(moviesAPI);
     dispatch(getAllMovies());
-    dispatch(getDetailMovies());
-  }, []);
-
-  // const getMovies = (API) => {
-  //   fetch(API)
-  //     .then((res) => res.json())
-  //     .then((data) => {
-  //       setData(data.results);
-  //     });
-  // };
-
-  // const handleSubmit = async (e) => {
-  //   e.preventDefault();
-
-  //   if (search) {
-  //     try {
-  //       const url = `https://api.themoviedb.org/3/search/movie?api_key=cf87462aff878f20a02d5d0d442ddb61&query=${search}`;
-  //       const res = await fetch(url);
-  //       const data = await res.json();
-  //       setData(data.results);
-  //       alert("Success");
-  //     } catch (e) {
-  //       console.log(e);
-  //     }
-  //     setSearch("");
-  //   } else if (search === "") {
-  //     alert("ERROR: Mohon isi input !!!");
-  //   }
-  // };
-
-  // const handleChange = (e) => {
-  //   setSearch(e.target.value);
-  // };
+  }, [dispatch]);
 
   const handleChange = (e) => {
     setSearch(e.target.value);
@@ -71,11 +30,17 @@ function Home({ token, setToken, setName }) {
     if (search === "") return alert("Mohon isi terlebih dahulu!");
     dispatch(searchMovies(search));
     setSearch("");
+    setMencari(true);
   };
 
   const handleLogout = () => {
     localStorage.removeItem("token");
     setToken(null);
+  };
+
+  const handleRefresh = () => {
+    dispatch(getAllMovies());
+    setMencari(false);
   };
 
   return (
@@ -155,10 +120,19 @@ function Home({ token, setToken, setName }) {
       <div>
         <UncontrolledExample />
       </div>
-      {/* {search ? (<h1 style={{ marginTop: 22 }}>Search Result</h1>):(<h1 style={{ marginTop: 22 }}>Popular Movie</h1>)} */}
 
       <section id="movieList">
-        <h1 style={{ marginTop: 22 }}>Popular Movies / Hasil Pencarian</h1>
+        {mencari ? (
+          <>
+            <h1 style={{ marginTop: 22 }}>Hasil Pencarian</h1>
+            <Button onClick={handleRefresh}>
+              Back <RiArrowGoBackFill />
+            </Button>
+          </>
+        ) : (
+          <h1 style={{ marginTop: 22 }}>Popular Movies</h1>
+        )}
+
         <div className="movie-container">
           {movies.results?.map(
             movies ? (
