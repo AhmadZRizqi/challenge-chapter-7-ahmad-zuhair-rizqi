@@ -1,13 +1,13 @@
-import { useState, useEffect } from "react";
-import { Navbar, Container, Form, Button, Nav } from "react-bootstrap";
-import { useNavigate } from "react-router-dom";
-import "bootstrap/dist/css/bootstrap.min.css";
-import UncontrolledExample from "../components/Carousel";
 import "../App.css";
-import MovieList from "../components/MovieList";
+import { useState, useEffect } from "react";
+import "bootstrap/dist/css/bootstrap.min.css";
 import { FaUserCircle } from "react-icons/fa";
+import { useNavigate } from "react-router-dom";
+import MovieList from "../components/MovieList";
 import { RiArrowGoBackFill } from "react-icons/ri";
 import { useDispatch, useSelector } from "react-redux";
+import UncontrolledExample from "../components/Carousel";
+import { Navbar, Container, Form, Button, Nav } from "react-bootstrap";
 import { getAllMovies, searchMovies } from "../redux/actions/movieActions";
 
 function Home({ token, setToken }) {
