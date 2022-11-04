@@ -17,7 +17,7 @@ function UncontrolledExample() {
             Sinopsis Doctor Strange in the Multiverse of Madness mengisahkan
             Stephen Strange yang kedatangan tamu dari semesta lain, yaitu
             America Chavez. Kehadiran America ke semesta Strange yang berada di
-            universe utama MCU adalah untuk meminta bantuan sang superhero
+            universe utama MCU adalah untuk meminta bantuan sang superhero.
           </p>
           <Button variant="danger">
             <HiOutlinePlay /> Watch Trailer
