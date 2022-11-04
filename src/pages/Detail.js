@@ -7,7 +7,7 @@ import { AiFillStar } from "react-icons/ai";
 import { useDispatch, useSelector } from "react-redux";
 import { getDetailMovies } from "../redux/actions/movieActions";
 
-const Detail = ({ token, setToken }) => {
+const Detail = () => {
   const imageAPI = "https://image.tmdb.org/t/p/w500/";
   const params = useParams();
   const navigate = useNavigate();
