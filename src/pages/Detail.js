@@ -46,7 +46,7 @@ const Detail = () => {
           style={{ width: 150 }}
         ></img>
         <h5 style={{ fontSize: 15 }}>
-          <AiFillStar /> {movies.id ? movies.vote_average : "Loading..."}
+          <AiFillStar /> {movies ? movies.vote_average : "Loading..."}
         </h5>
         <h5 style={{ fontSize: 15 }}>
           Release Date: {movies ? movies.release_date : "Loading..."}
